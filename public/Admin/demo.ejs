@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <a href="/getdetails">Get Details</a>
+        </div>
+        <hr>
+        
+        <% if(Cardiology!=null) { %>
+        <table>
+        <tr>
+            <th>Route</th>
+            <th>origin </th>
+            <th>Destination</th>
+            <th>EstimatedTimeOfArrival </th>
+            <th>Date </th>
+            <th>Time</th>
+        </tr>
+        <% Cardiology.forEach(function(item){ %>
+        <tr>
+            <td><%= item.doctors%></td>
+            <td><%= item.name %></td>
+            <td><%= item.age%></td>
+            <td><%= item.add %></td>
+            <td><%= item.phone%></td>
+            <td><%= item.email%></td>
+            <td><%= item.date%></td>
+            <td><%= item.time%></td>
+        
+        </tr>
+        <% }) %>
+        </table>
+        <% } %>
+</body>
+</html>
